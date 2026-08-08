@@ -20,10 +20,12 @@ composer
     await ctx.reply(ctx.t("start-msg", { user: ctx.from!.first_name }), {
       parse_mode: "HTML",
       reply_markup: new InlineKeyboard()
-        .text(ctx.t("usage-help"), "helper")
-        .text("Language 🌐", "setLang").row()
-        .url(ctx.t("updates"), "https://t.me/BotzHub"),
-      link_preview_options: { is_disabled: true },
+        // .text(ctx.t("usage-help"), "helper")
+        // .text("Language 🌐", "setLang").row()
+        // .url(ctx.t("updates"), "https://t.me/BotzHub"),
+        .url("FLIPKART", "https://t.me/+NB3mEazQQClkNTcx")
+        .url("AMAZON", "https://t.me/+WJaNqZj0XKE3OTRl"),
+      disable_web_page_preview: true,
     });
     await addUser(ctx.from!.id);
   });
@@ -37,7 +39,7 @@ composer.callbackQuery("mainMenu", async (ctx) => {
         .text(ctx.t("usage-help"), "helper")
         .text("Language 🌐", "setLang").row()
         .url(ctx.t("updates"), "https://t.me/BotzHub"),
-      link_preview_options: { is_disabled: true },
+      disable_web_page_preview: true,
     },
   );
 });
